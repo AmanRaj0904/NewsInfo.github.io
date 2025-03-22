@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendNews | Trending | Cricket</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./Assets/FavIcon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Home" onclick="reload()">TrendNews</a>
+            <ul class="nav-links" role="menubar">
+                <li role="none" style="--order: 1"><a href="#Technology" id="technology" role="menuitem"
+                        onclick="onNavItemClick('Technology')">Technology</a></li>
+                <li role="none" style="--order: 2"><a href="#IPL" role="menuitem" id="ipl"
+                        onclick="onNavItemClick('ipl')">IPL</a></li>
+                <li role="none" style="--order: 3"><a href="#Politics" role="menuitem" id="Politics"
+                        onclick="onNavItemClick('Politics')">Politics</a></li>
+                <li role="none" style="--order: 4"><a href="#Finance" role="menuitem" id="Finance"
+                        onclick="onNavItemClick('Finance')">Finance</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="search" class="search-input" placeholder="E.g. Cricket" id="Search_text">
+                <button class="search-button" aria-label="Submit search" id="Search_button">Search</button>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        </div>
+    </nav>
+
+    <div class="background-animation"></div>
+    <div id="card_template" class="card" style="display: none;">
+        <img src="https://via.placeholder.com/150" alt="News Image" id="news_img">
+        <div class="card-content">
+            <h2 id="news_title">Article Title</h2>
+            <p id="newsDesc">Article Description</p>
+        </div>
+    </div>
+    <div class="card-container" id="Card_Container"></div>
+
+    <footer>
+        <p>
+            © Designed with <span class="heart">❤</span> by Aman
+            <i class="fas fa-sparkles icon"></i>
+        </p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/api.js"></script>
+</body>
+</html>
